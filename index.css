@@ -204,6 +204,10 @@ html, body {
   background: #fff;
 }
 
+.service-scroll-wrapper::-webkit-scrollbar {
+  display: none;            
+}
+
 .service-scroll-wrapper {
   height: 100vh;
   overflow-y: auto;
@@ -211,7 +215,12 @@ html, body {
   scroll-behavior: smooth;
   padding: 40px;
   background-color: #ffffff;
+    -ms-overflow-style: none; 
+  scrollbar-width: none;    
+  
 }
+
+
 
 .service-block {
   height: 100vh;

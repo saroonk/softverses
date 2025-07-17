@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contactus.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+
+
+    <section class="hero-section mb-5">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="images/Contact_Us_Hero_Section_Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="blog-head col-md-8">
+            <span class="text-uppercase fw-medium section-label card-category" style="letter-spacing: 2px;">Contact</span>
+            <h1 class="contact-header">
+                Want to discuss<br>a project?
+            </h1>
+        </div>
+    </div>
+</section>
+
+
+
+    <div class="contact-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="left-panel">
+                        <div>
+                            <div class="contact-header">
+                                
+                                <p>Tell us a little about your project and one of our team will be in touch with you as soon as possible.</p>
+                            </div>
+                            
+                            <div class="contact-info">
+                                <div class="contact-section">
+                                    <h3>General enquiries</h3>
+                                    <a href="mailto:info@bluefrontier.co.uk">info@bluefrontier.co.uk</a>
+                                </div>
+                                
+                                <div class="contact-section">
+                                    <h3>Support enquiries</h3>
+                                    <a href="mailto:support@bluefrontier.co.uk">support@bluefrontier.co.uk</a>
+                                </div>
+                                
+                                <div class="contact-section">
+                                    <h3>Interested in joining the team?</h3>
+                                    <a href="mailto:careers@bluefrontier.co.uk">careers@bluefrontier.co.uk</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn">LinkedIn</a>
+                            <a href="#" class="social-btn">Instagram</a>
+                            <a href="#" class="social-btn">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 mt-5">
+                    <div class="form-panel">
+                        <form id="contactForm">
+                        
+                            <div class="form-step active" data-step="1">
+                                <h4>What service are you interested in?</h4>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Service Type <span class="required">*</span></label>
+                                    <select class="form-select" name="service" required>
+                                        <option value="">Please select a service</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="mobile-app">Mobile App Development</option>
+                                        <option value="ui-ux-design">UI/UX Design</option>
+                                        <option value="digital-marketing">Digital Marketing</option>
+                                        <option value="consulting">Consulting</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Budget Range <span class="required">*</span></label>
+                                    <select class="form-select" name="budget" required>
+                                        <option value="">Please select your budget</option>
+                                        <option value="under-5k">Under Rs5,000</option>
+                                        <option value="5k-10k">Rs5,000 - Rs10,000</option>
+                                        <option value="10k-25k">Rs10,000 - Rs25,000</option>
+                                        <option value="25k-50k">RS25,000 - Rs50,000</option>
+                                        <option value="50k-100k">RS50,000 - RS100,000</option>
+                                        <option value="over-100k">Over Rs100,000</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-navigation">
+                                    <div></div>
+                                    <div>
+                                        <button type="button" class="btn-next" id="nextBtn">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+      
+                            <div class="form-step" data-step="2">
+                                <h4>Tell us about yourself</h4>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Full Name <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="fullName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Email Address <span class="required">*</span></label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" class="form-control" name="phone" required>
+                                </div>
+                                
+                                <div class="form-navigation">
+                                    <div>
+                                        <button type="button" class="btn-prev">Previous</button>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn-next">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+          
+                            <div class="form-step" data-step="3">
+                                <h4>Company Details</h4>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Company Name <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="company" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Your Position</label>
+                                    <input type="text" class="form-control" name="position">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Company Address</label>
+                                    <textarea class="form-control" name="address" rows="3"></textarea>
+                                </div>
+                                
+                                <div class="form-navigation">
+                                    <div>
+                                        <button type="button" class="btn-prev">Previous</button>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn-next">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+             
+                            <div class="form-step" data-step="4">
+                                <h4>Project Details</h4>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Project Timeline</label>
+                                    <select class="form-select" name="timeline">
+                                        <option value="">Please select timeline</option>
+                                        <option value="asap">ASAP</option>
+                                        <option value="1-month">Within 1 month</option>
+                                        <option value="3-months">Within 3 months</option>
+                                        <option value="6-months">Within 6 months</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Tell us about your project <span class="required">*</span></label>
+                                    <textarea class="form-control" name="projectDetails" rows="4" required placeholder="Please include any details you feel would be beneficial for us to know, including scope, timelines, budget, any integrations, etc."></textarea>
+                                </div>
+                                
+                                <div class="form-navigation">
+                                    <div>
+                                        <button type="button" class="btn-prev">Previous</button>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn-submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+ <footer class="footer-section mt-3">
+        <div class="container">
+            <div class="row footer-main-content">
+          
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-column">
+                        <ul class="services-list">
+                            <li>Design</li>
+                            <li>Development</li>
+                            <li>Marketing</li>
+                            <li>Technical</li>
+                            <li>Consultancy</li>
+                            <li>MedTech</li>
+                        </ul>
+                    </div>
+                </div>
+                
+    
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-column">
+                        <ul>
+                            <li><a href="#">Our Work</a></li>
+                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Meet the Team</a></li>
+                            <li><a href="#">Sectors</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-column">
+                        <div class="office-location">
+                            <h5>Salisbury (Head Office)</h5>
+                            <p>Unit 1, The Woodford Centre, Lysander Way, Salisbury, SP4 6BU, UK</p>
+                            <p class="phone">+44 (0)1722 744 574</p>
+                        </div>
+                        
+                        <div class="office-location">
+                            <h5>Bristol</h5>
+                            <p>Desklodge House, 2 Redcliffe Way, Bristol, BS1 6NL, UK</p>
+                            <p class="phone">+44 (0)1173 741 774</p>
+                        </div>
+                    </div>
+                </div>
+                
+   
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-column">
+                        <div class="office-location">
+                            <h5>Southampton</h5>
+                            <p>Floor 8, The White Building, 1-4 Cumberland Place, Southampton, SO15 2NP, UK</p>
+                            <p class="phone">+44 (0)2382 354 320</p>
+                        </div>
+                        
+                        <div class="office-location">
+                            <h5>London</h5>
+                            <p>Beton, 23 Goswell Rd, Barbican, London, EC1M 7AJ, UK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="footer-divider"></div>
+          
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="brand-section">
+                        <p>Discover our creative side</p>
+                        <div class="brand-logo">cobalt.studio</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="brand-section">
+                        <p>Visit our cyber security experts</p>
+                        <div class="resolute-logo">
+                            <span class="logo-icon">🔒</span>
+                            <span class="logo-text">resolute</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+   
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © Blue Frontier IT Ltd 2025 | Company No 05569666
+                </div>
+                <div class="footer-links">
+                    <a href="#">Sitemap</a>
+                    <span style="color: #b0b0b0;">|</span>
+                    <a href="#">Policies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        class MultiStepForm {
+            constructor() {
+                this.currentStep = 1;
+                this.totalSteps = 4;
+                this.form = document.getElementById('contactForm');
+                
+                this.init();
+            }
+            
+            init() {
+      
+                this.form.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('btn-next')) {
+                        e.preventDefault();
+                        this.nextStep();
+                    } else if (e.target.classList.contains('btn-prev')) {
+                        e.preventDefault();
+                        this.prevStep();
+                    }
+                });
+                
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+            }
+            
+            nextStep() {
+                if (this.validateCurrentStep()) {
+                    if (this.currentStep < this.totalSteps) {
+                        this.currentStep++;
+                        this.updateUI();
+                    }
+                }
+            }
+            
+            prevStep() {
+                if (this.currentStep > 1) {
+                    this.currentStep--;
+                    this.updateUI();
+                }
+            }
+            
+            updateUI() {
+       
+                document.querySelectorAll('.form-step').forEach(step => {
+                    step.classList.remove('active');
+                });
+                
+     
+                const currentStepElement = document.querySelector(`.form-step[data-step="${this.currentStep}"]`);
+                if (currentStepElement) {
+                    currentStepElement.classList.add('active');
+                }
+            }
+            
+            validateCurrentStep() {
+                const currentStepElement = document.querySelector(`.form-step[data-step="${this.currentStep}"]`);
+                const requiredFields = currentStepElement.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('is-invalid');
+                        isValid = false;
+            
+                        field.addEventListener('input', () => {
+                            field.classList.remove('is-invalid');
+                        }, { once: true });
+                    } else {
+                        field.classList.remove('is-invalid');
+                    }
+                });
+                
+                if (!isValid) {
+                    const firstInvalidField = currentStepElement.querySelector('.is-invalid');
+                    if (firstInvalidField) {
+                        firstInvalidField.focus();
+                    }
+                }
+                
+                return isValid;
+            }
+            
+            handleSubmit(e) {
+                e.preventDefault();
+                
+                if (!this.validateCurrentStep()) {
+                    return;
+                }
+                
+
+                const formData = new FormData(this.form);
+                const data = Object.fromEntries(formData);
+                
+
+                this.showSuccessMessage();
+
+                console.log('Form submitted:', data);
+            }
+            
+            showSuccessMessage() {
+                const formPanel = document.querySelector('.form-panel');
+                formPanel.innerHTML = `
+                    <div class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank you for your enquiry!</h3>
+                        <p>We have received your project details and one of our team will be in touch with you as soon as possible.</p>
+                        <button class="btn-submit" style="margin-top: 30px;" onclick="location.reload()">Submit Another Enquiry</button>
+                    </div>
+                `;
+            }
+        }
+        
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new MultiStepForm();
+        });
+    </script>
+</body>
+</html>

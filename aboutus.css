@@ -1,28 +1,46 @@
-        .about-us-section {
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fcfbfb;
+                        margin: 0;
             padding: 0;
         }
+
+
         
-        .content-wrapper {
-            padding: 60px 0;
-            color: white;
-            max-width: 900px;
-        }
-        
-        .section-label {
+             
+.hero-section {
+    position: relative;
+    width: 100%;
+
+
+    padding: 250px 0; 
+    padding-bottom: 30px !important;
+    background-color: #fffefe;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 2px);
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+                .section-label {
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #dfe0e2;
+            color: #070707;
             margin-bottom: 20px;
             position: relative;
             padding-left: 20px;
@@ -39,19 +57,29 @@
             background-color: #d418f1;
             border-radius: 50%;
         }
+
+
+        
+        .content-wrapper {
+            padding: 60px 0;
+            color: rgb(6, 6, 6);
+            max-width: 900px;
+        }
+        
+
         
         .main-heading {
             font-size: 3.5rem;
-            font-weight: 400;
+            font-weight: 500;
             line-height: 1.2;
             margin-bottom: 30px;
-            color: white;
+            color: rgb(8, 8, 8);
         }
         
         .description {
             font-size: 1.1rem;
             line-height: 1.6;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(47, 45, 45, 0.9);
             font-weight: 300;
         }
         
