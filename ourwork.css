@@ -20,7 +20,7 @@
 
 
     padding: 250px 0; 
-    padding-bottom: 0px !important;
+    padding-bottom: 30px !important;
     background-color: #fffefe;
 }
 
@@ -41,17 +41,18 @@
 }
 
 
-
         .blog-heading {
-  font-size: clamp(33px, 5vw, 56px);
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000;
-              /* margin-bottom: clamp(1.5rem,3vw,260px); */
-
-
-
-}
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        
+        .blog-heading  {
+            font-size: clamp(2rem,4vw,3.5rem);
+            font-weight: 400;
+            color: #060606;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
 
         .category-filters {
             margin-bottom: 30px;
