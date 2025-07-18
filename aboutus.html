@@ -6,6 +6,9 @@
     <title>About Us Section</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
  
 </head>
 <body>
@@ -72,7 +75,37 @@
 <section class="custom-team-section py-5">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 offset-lg-2 custom-content-wrapper p-5">
+            <div class="col-lg-4 p-5">
+        <div class="owl-carousel team-carousel">
+ 
+          <div class="team-member text-center">
+            <div class="team-image-wrapper mx-auto mb-3">
+              <img src="images/Gemini_Generated_Image_bgla0hbgla0hbgla.jpeg" alt="Team Member" class="team-image">
+            </div>
+            <h5 class="mb-1">John Doe</h5>
+            <p class="">Developer</p>
+          </div>
+
+          <div class="team-member text-center">
+            <div class="team-image-wrapper mx-auto mb-3">
+              <img src="images/Leonardo_Lightning_a_bowl_of_green_salad_on_the_table_2.jpg" alt="Team Member" class="team-image">
+            </div>
+            <h5 class="mb-1">Jane Smith</h5>
+            <p class="">Designer</p>
+          </div>
+
+ 
+        </div>
+
+        <div class="carousel-nav mt-3 d-flex justify-content-center">
+          <button class="team-prev btn btn-outline-dark me-2 rounded-circle">&larr;</button>
+          <button class="team-next btn btn-outline-dark rounded-circle">&rarr;</button>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-8  custom-content-wrapper p-5">
 
 
         <div class="d-flex align-items-center gap-2 mb-3">
@@ -281,5 +314,31 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+    const teamOwl = $('.team-carousel');
+
+    teamOwl.owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: false,
+      items: 1,
+      smartSpeed: 500
+    });
+
+    $('.team-next').click(function () {
+      teamOwl.trigger('next.owl.carousel');
+    });
+
+    $('.team-prev').click(function () {
+      teamOwl.trigger('prev.owl.carousel');
+    });
+  });
+    </script>
 </body>
 </html>
