@@ -237,7 +237,7 @@
   </div>
 </div>
 
-<div class="d-md-none d-flex justify-content-center gap-3 mt-3 mb-3">
+<div class="d-md-none d-flex justify-content-center gap-3 mt-3 ">
   <button class="btn btn-outline-dark custom-mobile-prev">
     <i class="fas fa-chevron-left"></i>
   </button>
@@ -865,6 +865,149 @@ $(document).ready(function () {
     });
   }
 });
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const imagePanel = document.querySelector(".image-panel");
+    const scrollWrapper = document.querySelector(".service-scroll-wrapper");
+    const serviceImage = document.getElementById("service-image");
+    const serviceBlocks = document.querySelectorAll(".service-block");
+
+    const SCROLL_SCALE = 0.8;
+    let isScrolling = false;
+    let scrollTimeout;
+
+    function updateImage() {
+        const scrollTop = scrollWrapper.scrollTop;
+        const blockHeight = scrollWrapper.scrollHeight / serviceBlocks.length;
+        const currentIndex = Math.round(scrollTop / blockHeight);
+        const activeBlock = serviceBlocks[Math.min(currentIndex, serviceBlocks.length - 1)];
+
+        if (activeBlock && serviceImage) {
+            const newImageSrc = activeBlock.dataset.image;
+            if (newImageSrc && serviceImage.src !== newImageSrc) {
+                serviceImage.src = newImageSrc;
+            }
+        }
+    }
+
+    function snapToNearestBlock() {
+        if (isScrolling) return;
+
+        const scrollTop = scrollWrapper.scrollTop;
+        const blockHeight = scrollWrapper.clientHeight;
+        const currentIndex = Math.round(scrollTop / blockHeight);
+        const targetScrollTop = currentIndex * blockHeight;
+
+        if (Math.abs(scrollTop - targetScrollTop) > 5) {
+            scrollWrapper.scrollTo({
+                top: targetScrollTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    if (imagePanel && scrollWrapper) {
+        imagePanel.addEventListener("wheel", function (e) {
+            const atTop = scrollWrapper.scrollTop <= 5;
+            const atBottom = scrollWrapper.scrollHeight - scrollWrapper.scrollTop <= scrollWrapper.clientHeight + 5;
+            const scrollingDown = e.deltaY > 0;
+            const scrollingUp = e.deltaY < 0;
+
+            if ((atBottom && scrollingDown) || (atTop && scrollingUp)) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            isScrolling = true;
+            clearTimeout(scrollTimeout);
+
+            scrollWrapper.scrollBy({
+                top: e.deltaY * SCROLL_SCALE,
+                behavior: 'auto'
+            });
+
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+                snapToNearestBlock();
+            }, 150);
+        }, { passive: false });
+
+        let touchStartY = 0;
+        imagePanel.addEventListener("touchstart", function (e) {
+            touchStartY = e.touches[0].clientY;
+        });
+
+        imagePanel.addEventListener("touchmove", function (e) {
+            const touchEndY = e.touches[0].clientY;
+            const deltaY = (touchStartY - touchEndY) * SCROLL_SCALE;
+            const atTop = scrollWrapper.scrollTop <= 5;
+            const atBottom = scrollWrapper.scrollHeight - scrollWrapper.scrollTop <= scrollWrapper.clientHeight + 5;
+            const scrollingDown = deltaY > 0;
+            const scrollingUp = deltaY < 0;
+
+            if ((atBottom && scrollingDown) || (atTop && scrollingUp)) return;
+
+            e.preventDefault();
+
+            isScrolling = true;
+            clearTimeout(scrollTimeout);
+
+            scrollWrapper.scrollBy({
+                top: deltaY,
+                behavior: 'auto'
+            });
+
+            touchStartY = touchEndY;
+        }, { passive: false });
+
+        imagePanel.addEventListener("touchend", function () {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+                snapToNearestBlock();
+            }, 100);
+        });
+    }
+
+    scrollWrapper.addEventListener("wheel", function (e) {
+        const atTop = scrollWrapper.scrollTop <= 5;
+        const atBottom = scrollWrapper.scrollHeight - scrollWrapper.scrollTop <= scrollWrapper.clientHeight + 5;
+        const scrollingDown = e.deltaY > 0;
+        const scrollingUp = e.deltaY < 0;
+
+        if ((atBottom && scrollingDown) || (atTop && scrollingUp)) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        isScrolling = true;
+        clearTimeout(scrollTimeout);
+
+        scrollWrapper.scrollBy({
+            top: e.deltaY * SCROLL_SCALE,
+            behavior: 'auto'
+        });
+
+        scrollTimeout = setTimeout(() => {
+            isScrolling = false;
+            snapToNearestBlock();
+        }, 150);
+    }, { passive: false });
+
+    scrollWrapper.addEventListener("scroll", function () {
+        updateImage();
+    });
+
+    updateImage();
+});
+
 
 </script>
 

@@ -9,6 +9,7 @@ html, body {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif; 
   overflow-x: hidden; 
+  overflow-y: auto;
 }
 
 
@@ -193,56 +194,43 @@ html, body {
 
 
 
-
-
-
-
-
-
-
 .service-scroll-section {
-  background: #fff;
-}
+            background: #fff;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-.service-scroll-wrapper::-webkit-scrollbar {
-  display: none;            
-}
+        .service-scroll-wrapper {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            padding: 0;
+            background-color: #ffffff;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
 
-.service-scroll-wrapper {
-  height: 100vh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  padding: 40px;
-  background-color: #ffffff;
-    -ms-overflow-style: none; 
-  scrollbar-width: none;    
-  
-}
+        .service-scroll-wrapper::-webkit-scrollbar {
+            display: none;
+        }
 
-
-
-.service-block {
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 40px 20px;
-    word-wrap: break-word;
-  overflow-wrap: break-word;
-}
+        .service-block {
+            height: 100vh;
+            scroll-snap-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative;
+        }
 
 
-/* .service-block {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 25px 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-} */
+
+
+
+
 
 .service-index {
   font-family: monospace;
@@ -313,20 +301,21 @@ html, body {
 
 
 
-/* Hide vertical scroll service section on mobile */
+
 @media (max-width: 767px) {
   .service-scroll-wrapper {
     display: none !important;
   }
 
-  .mobile-carousel .service-block {
-    height: auto;
-    max-height: 480px;
-    overflow-y: auto;
-  }
+.mobile-carousel .service-block {
+  height: auto;
+  max-height: none;
+  padding-bottom: 1rem;
+}
+
 
   .mobile-carousel .service-desc {
-    max-height: 150px;
+    max-height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
   }
