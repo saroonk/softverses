@@ -309,14 +309,14 @@ html, body {
 
 .mobile-carousel .service-block {
   height: auto;
-  max-height: none;
+  max-height: 100%;
   padding-bottom: 1rem;
 }
 
 
   .mobile-carousel .service-desc {
     max-height: 100%;
-    overflow: hidden;
+    overflow: auto;
     text-overflow: ellipsis;
   }
 }
