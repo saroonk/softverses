@@ -211,67 +211,107 @@
 
 
 
-
-
-
-.about-company-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.open-positions-section .card-title {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.open-positions-section .btn {
-    width: 100%;
-}
-
-.section-title h2 {
-    font-size: 2.5rem;
-}
-
-.section-title p {
-    color: #6c757d;
-}
-
-
-
-
-
-
-
-#applyModalLabel{
-      color: rgb(249, 247, 247) !important;
-    }
-
-    .position-card {
-      background-color: #fff;
-      border: 1px solid #ddd;
+            .service-card {
+    
       padding: 20px;
-      border-radius: 8px;
-      transition: 0.3s;
+      margin-bottom: clamp(50px,3vw,100px);
+
+
+    }
+    .service-image {
+      max-width: 100%;
+      height: 30rem;
+      border-radius: 26px;
     }
 
-    .position-card:hover {
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .service-heading {
+      font-size: 3rem; 
+      font-weight: 400;
+      color: #2c3e50;
+      margin-bottom: 10px;
     }
 
-    .modal-header {
-      background-color: #060606;
-      color: white;
+    .service-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+    }
+
+    .readmore{
+        color: black;
+        text-decoration: underline;
+        font-weight: 600;
+        transition: 0.6s ease;
+    }
+
+    .readmore:hover{
+        text-decoration: none;
+    }
+
+
+    @media (max-width: 768px) {
+      .service-heading {
+        font-size: 1.6rem;
+      }
+      .service-description {
+        font-size: 1rem;
+      }
     }
 
 
 
-   .apply-btn{
-        background-color: rgb(11, 11, 11);
-        color: white;
+
+
+
+
+
+
+
+
+
+
+
+
+        .impact-section {
+      text-align: center;
+      padding: 60px 20px;
     }
 
+    .impact-title {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
 
+    .impact-description {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+      line-height: 1.7;
+    }
 
+    .impact-stat {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .impact-text {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .impact-stat {
+        font-size: 1.6rem;
+      }
+
+      .impact-description {
+        font-size: 1rem;
+      }
+    }
 
 /* fooooter//////////////////////// */
 

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career</title>
+    <title>Service</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="career.css">
+    <link rel="stylesheet" href="service.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -64,9 +64,9 @@
 
     <div class="container">
         <div class="blog-head col-md-8">
-            <span class="text-uppercase fw-medium section-label card-category" style="letter-spacing: 2px;">Career</span>
+            <span class="text-uppercase fw-medium section-label card-category" style="letter-spacing: 2px;">Services</span>
             <h1 class="contact-header">
-                Want to Join Our Team?
+                What Are Our Services
             </h1>
         </div>
     </div>
@@ -78,126 +78,136 @@
 
 
 
-<section class="about-company-section py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12 mb-4 mb-lg-0">
-                <h2 class="text-center pb-2">Who We Are</h2>
-                <p>At Softverses, we are a passionate team of designers, developers, marketers, and tech specialists committed to delivering innovative solutions. We thrive in a collaborative environment where creativity meets technology, and everyone’s ideas are valued.</p>
-                <p>Our work culture encourages continuous learning, ownership, and a shared vision for growth. We believe in fostering talent, embracing flexibility, and celebrating achievements together.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="open-positions-section py-5 bg-light">
-    <div class="container">
-        <div class="section-title text-center mb-5">
-            <h2 class="">Open Positions</h2>
-            <p>We are always on the lookout for talented individuals to join our growing team. Explore our current openings below.</p>
-        </div>
-        <div class="row g-4">
-         
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Software Developer</h5>
-                        <p class="mb-1"><strong>Experience:</strong> 2-4 Years</p>
-                        <p class="mb-1"><strong>Location:</strong> Salisbury, UK</p>
-                        <p class="card-text mt-2">We are looking for a passionate Software Developer to build and implement functional programs. You will work with other Developers and Product Managers throughout the software development life cycle.</p>
-                        <a href="#" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</a>
-                    </div>
-                </div>
-            </div>
- 
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Software Engineer</h5>
-                        <p class="mb-1"><strong>Experience:</strong> 3-6 Years</p>
-                        <p class="mb-1"><strong>Location:</strong> Bristol, UK</p>
-                        <p class="card-text mt-2">Join our engineering team to design, develop, and maintain high-quality software applications. You should be eager to learn and contribute to innovative projects in a collaborative environment.</p>
-                        <a href="#" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</a>
-                    </div>
-                </div>
-            </div>
- 
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">UX/UI Designer</h5>
-                        <p class="mb-1"><strong>Experience:</strong> 2-5 Years</p>
-                        <p class="mb-1"><strong>Location:</strong> London, UK</p>
-                        <p class="card-text mt-2">Seeking a creative UX/UI Designer to craft user-friendly digital interfaces. You will collaborate with cross-functional teams to translate concepts into wireframes and mockups that lead to intuitive user experiences.</p>
-                        <a href="#" class="btn btn-dark mt-auto" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 
 
 
 
+<div class="container my-4">
+  <div class="service-card">
+    <div class="row align-items-center text-center">
+      
+      <!-- Left Side: Text Content -->
+      <div class="col-md-6 mb-3 mb-md-0 order-2 order-md-1">
+        <h3 class="mb-3 service-heading pt-4">Web Design</h3>
+        <p class="mb-0 service-description ">
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+             We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
 
-
-
-
-
-
-<div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="applyModalLabel">Apply for a Position</h5>
-        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </p>
+        <a href="" class="readmore">Read More</a>
       </div>
-      <form method="POST" enctype="multipart/form-data">
-  {% csrf_token %}
-  <div class="modal-body">
-    <div class="row g-3">
-      <div class="col-md-6">
-        <label for="name" class="form-label">Full Name</label>
-        <input type="text" name="name" class="form-control" id="name" required />
+
+      <!-- Right Side: Image -->
+      <div class="col-md-6 text-center order-1 order-md-2">
+        <img src="images/Leonardo_Phoenix_A_closeup_of_a_classic_hamburger_featuring_a_3.jpg" alt="Web Design" class="service-image img-fluid">
       </div>
-      <div class="col-md-6">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" name="email" class="form-control" id="email" required />
-      </div>
-      <div class="col-md-6">
-        <label for="phone" class="form-label">Phone Number</label>
-        <input type="number" name="phone" class="form-control" id="phone" required />
-      </div>
-      <div class="col-md-6">
-        <label for="position" class="form-label">Position Applying For</label>
-        <select name="position" class="form-select" id="position" required>
-          <option selected disabled value="">Choose...</option>
-          {% for job in job_positions %}
-            <option value="{{ job.id }}">{{ job.title }}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="col-md-12">
-        <label for="resume" class="form-label">Upload Resume (PDF/DOC)</label>
-        <input type="file" name="resume" class="form-control" id="resume" accept=".pdf,.doc,.docx" required />
-      </div>
-      <div class="col-md-12">
-        <label for="message" class="form-label">Cover Letter / Message</label>
-        <textarea name="message" class="form-control" id="message" rows="4"></textarea>
-      </div>
-    </div>
-  </div>
-  <div class="modal-footer">
-    <button type="submit" class="btn apply-btn" >Submit Application</button>
-  </div>
-</form>
 
     </div>
   </div>
+
+
+
+
+<div class="service-card">
+    <div class="row align-items-center text-center">
+      
+
+
+
+      <!-- Right Side: Image -->
+      <div class="col-md-6 text-center">
+        <img src="images/Leonardo_Phoenix_A_closeup_of_a_classic_hamburger_featuring_a_3.jpg" alt="Web Design" class="service-image img-fluid">
+      </div>
+
+
+
+    <div class="col-md-6 mb-3 mb-md-0 ">
+        <h3 class="mb-3 service-heading pt-4">Web Development</h3>
+        <p class="mb-0 service-description ">
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+             We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.   We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+
+        </p>
+        <a href="" class="readmore">Read More</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+<div class="service-card">
+    <div class="row align-items-center text-center">
+      
+
+      <div class="col-md-6 mb-3 mb-md-0 order-2 order-md-1">
+        <h3 class="mb-3 service-heading pt-4">Digital marketing</h3>
+        <p class="mb-0 service-description ">
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+             We craft beautiful and responsive websites tailored to your brand identity and goals.
+          We craft beautiful and responsive websites tailored to your brand identity and goals.
+
+        </p>
+        <a href="" class="readmore">Read More</a>
+      </div>
+
+      <div class="col-md-6 text-center order-1 order-md-2">
+        <img src="images/Leonardo_Phoenix_A_closeup_of_a_classic_hamburger_featuring_a_3.jpg" alt="Web Design" class="service-image img-fluid">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container impact-section mt-5">
+  <h2 class="impact-title">Our Impact</h2>
+  <p class="impact-description">
+    Every innovation that happens here is out of a quest to get better at what we are already doing.
+    We deliver ideas that make a difference, create experiences that transform lives and build
+    ecosystems that foster progress.
+  </p>
+
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="impact-stat">700+</div>
+      <div class="impact-text">Projects launched successfully across<br>the globe</div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="impact-stat">10M</div>
+      <div class="impact-text">Daily customer engagement through<br>our projects</div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="impact-stat">100+</div>
+      <div class="impact-text">Digital transformation stories that<br>made a difference</div>
+    </div>
+  </div>
+  <button class="btn btn-dark p-3 mt-5">Contact Us</button>
 </div>
 
 
